@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Register Caja Paita
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/register.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- LOADING -->
+
+    <div id="loadingScreen">
+
+        <div class="loaderCard">
+
+            <img
+                src="{{ url_for('static', filename='img/abeja.png') }}"
+                class="loadingBee"
+            >
+
+            <h2>
+                Registrando...
+            </h2>
+
+            <div class="progress">
+
+                <div class="bar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="mainContainer">
+
+        <!-- LEFT -->
+
+        <div class="leftSide">
+
+            <div class="bee bee1"></div>
+
+            <div class="bee bee2"></div>
+
+            <div class="bee bee3"></div>
+
+            <img
+                src="{{ url_for('static', filename='img/piura.jpg') }}"
+                class="piuraImage"
+            >
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="rightSide">
+
+            <div class="registerCard">
+
+                <img
+                    src="{{ url_for('static', filename='img/logo.png') }}"
+                    class="logo"
+                >
+
+                <h1>
+                    Crear Cuenta
+                </h1>
+
+                <form
+                    id="registerForm"
+                    action="/register"
+                    method="POST"
+                >
+
+                    <!-- DNI -->
+
+                    <input
+                        type="text"
+                        name="dni"
+                        placeholder="DNI"
+                        maxlength="8"
+                        required
+                    >
+
+                    <!-- NOMBRE -->
+
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Nombre Completo"
+                        required
+                    >
+
+                    <!-- TARJETA -->
+
+                    <input
+                        type="text"
+                        name="tarjeta"
+                        placeholder="Número de Tarjeta"
+                        maxlength="16"
+                        required
+                    >
+
+                    <!-- PASSWORD -->
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Contraseña"
+                        required
+                    >
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <input
+                        type="password"
+                        name="confirm_password"
+                        placeholder="Confirmar Contraseña"
+                        required
+                    >
+
+                    <!-- PIN HIDDEN -->
+
+                    <input
+                        type="hidden"
+                        name="pin"
+                        id="hiddenPin"
+                    >
+
+                    <!-- PIN VISUAL -->
+
+                    <div class="pinContainer">
+
+                        <input
+                            type="password"
+                            maxlength="1"
+                            class="pin"
+                            required
+                        >
+
+                        <input
+                            type="password"
+                            maxlength="1"
+                            class="pin"
+                            required
+                        >
+
+                        <input
+                            type="password"
+                            maxlength="1"
+                            class="pin"
+                            required
+                        >
+
+                        <input
+                            type="password"
+                            maxlength="1"
+                            class="pin"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit">
+
+                        Registrarme
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='js/register.js') }}"
+    ></script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Login Caja Paita
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/login.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- LOADING -->
+
+    <div id="loadingScreen">
+
+        <div class="loaderCard">
+
+            <img
+                src="{{ url_for('static', filename='img/abeja.png') }}"
+                class="loadingBee"
+            >
+
+            <h2>
+                Ingresando...
+            </h2>
+
+            <div class="progress">
+
+                <div class="bar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="mainContainer">
+
+        <!-- LEFT -->
+
+        <div class="leftSide">
+
+            <div class="bee bee1"></div>
+
+            <div class="bee bee2"></div>
+
+            <div class="bee bee3"></div>
+
+            <img
+                src="{{ url_for('static', filename='img/piura.jpg') }}"
+                class="piuraImage"
+            >
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="rightSide">
+
+            <div class="loginCard">
+
+                <img
+                    src="{{ url_for('static', filename='img/logo.png') }}"
+                    class="logo"
+                >
+
+                <h1>
+                    Bienvenido
+                </h1>
+
+                <p>
+                    Inicia sesión para continuar
+                </p>
+
+                <form
+                    id="loginForm"
+                    action="/login"
+                    method="POST"
+                >
+
+                    <div class="inputBox">
+
+                        <input
+                            type="text"
+                            name="dni"
+                            placeholder="DNI"
+                            maxlength="8"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Contraseña"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit">
+
+                        Iniciar Sesión
+
+                    </button>
+
+                </form>
+
+                <a href="/register-page">
+
+                    ¿No tienes cuenta?
+                    Regístrate
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='js/login.js') }}"
+    ></script>
+
+</body>
+</html>

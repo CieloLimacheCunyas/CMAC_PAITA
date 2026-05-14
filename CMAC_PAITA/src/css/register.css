@@ -1,0 +1,31 @@
+@import url("login.css");
+
+.registerCard{
+    width:450px;
+    padding:40px;
+    border-radius:30px;
+    background:white;
+    box-shadow:0 0 30px rgba(0,0,0,0.1);
+}
+
+.registerCard input{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:15px;
+    border:1px solid #ccc;
+}
+
+.pinContainer{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.pin{
+    width:60px !important;
+    height:60px;
+    text-align:center;
+    font-size:25px;
+}
